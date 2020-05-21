@@ -1,0 +1,212 @@
+#include <iostream>
+using namespace std;
+void penjumlahan()
+{
+	int i,j,m,n ,matriks1[2][2],matriks2[2][2],hasil[2][2];
+	cout << "\t\t\t|=======================================|\n";
+	cout << "\t\t\t|========== PENJUMLAHAN MATRIX==========|\n";
+	cout << "\t\t\t|=======================================|\n\n";
+  cout << "Masukkan jumlah baris matriks: ";
+  cin >> m;
+  cout << "Masukkan jumlah kolom matriks: ";
+  cin >> n;
+  cout << "Masukkan elemen matrix pertama: \n";
+  for(i = 0; i < m; i++){
+    for(j = 0; j < n; j++){
+      cin >> matriks1[i][j];
+    }
+  }
+  cout << "Masukkan elemen matrix kedua: \n";
+  for(i = 0; i < m; i++){
+    for(j = 0; j < n; j++){
+      cin >> matriks2[i][j];
+    }
+  }
+  cout << "hasil penjumlahan matrix: \n";
+  for(i = 0; i < m; i++){
+    for(j = 0; j < n; j++){
+      hasil[i][j] = matriks1[i][j] + matriks2[i][j];
+      cout << hasil[i][j] << "\t";
+    }
+    cout << endl;
+  }
+  
+ 
+}
+
+void pengurangan()
+{
+	int i,j,m,n ,matriks1[2][2],matriks2[2][2],hasil[2][2];
+	cout << "\t\t\t|========================================|\n";
+	cout << "\t\t\t|========== PENGURANGAN MATRIX ==========|\n";
+	cout << "\t\t\t|========================================|\n\n";
+	cout << "Masukkan jumlah baris matriks: ";
+  cin >> m;
+  cout << "Masukkan jumlah kolom matriks: ";
+  cin >> n;
+  cout << "Masukkan elemen matriks pertama: \n";
+  for(i = 0; i < m; i++){
+    for(j = 0; j < n; j++){
+      cin >> matriks1[i][j];
+    }
+  }
+  cout << "Masukkan elemen matriks kedua: \n";
+  for(i = 0; i < m; i++){
+    for(j = 0; j < n; j++){
+      cin >> matriks2[i][j];
+    }
+  }
+  
+  cout << "Hasil pengurangan matriks: \n";
+  for(i = 0; i < m; i++){
+    for(j = 0; j < n; j++){
+      hasil[i][j] = matriks1[i][j] - matriks2[i][j];
+      cout << hasil[i][j] << "\t";
+    }
+    cout << endl;
+  }
+  
+}
+void perkalian()
+{
+	int matriks1[2][2], matriks2[2][2], hasil[2][2];
+  int i, j, k, m, n, p, q, jumlah = 0;
+    cout << "\t\t\t|=======================================|\n";
+	cout << "\t\t\t|========== PERKALIAN MATRIX ===========|\n";
+	cout << "\t\t\t|=======================================|\n\n";
+	cout << "Masukkan jumlah baris matriks pertama: ";
+  cin >> m;
+  cout << "Masukkan jumlah kolom matriks pertama: ";
+  cin >> n;
+  cout << "Masukkan jumlah baris matriks kedua: ";
+  cin >> p;
+  cout << "Masukkan jumlah kolom matriks kedua: ";
+  cin >> q;
+  if(n != p){
+    cout << "Matriks tidak dapat dikalikan satu sama lain.\n";
+  } else {
+    cout << "Masukkan elemen matriks pertama: \n";
+    for(i = 0; i < m; i++){
+      for(j = 0; j < n; j++){
+        cin >> matriks1[i][j];
+      }
+    }
+    cout << "Masukkan elemen matriks kedua: \n";
+    for(i = 0; i < p; i++){
+      for(j = 0; j < q; j++){
+        cin >> matriks2[i][j];
+      }
+    }
+    for(i = 0; i < m; i++){
+      for(j = 0; j < q; j++){
+        for(k = 0; k < p; k++){
+          jumlah = jumlah + matriks1[i][k] * matriks2[k][j];
+        }
+        hasil[i][j] = jumlah;
+        jumlah = 0;
+      }
+    }
+    cout << "Hasil perkalian matriks: \n";
+    for(i = 0; i < m; i++){
+      for(j = 0; j < n; j++){
+        cout << hasil[i][j] << "\t";
+      }
+      cout << endl;
+    }
+  }
+  
+}
+void pembagian()
+{
+	int nim1[2][2];
+	int nim2[2][2];
+	int jml [2][2];
+	int x, y;
+	cout << "\t\t\t|======================================|\n";
+	cout << "\t\t\t|========== PEMBAGIAN MATRIX ==========|\n";
+	cout << "\t\t\t|======================================|\n\n";
+	for (x = 0; x < 2; x++){
+		for (y = 0; y < 2; y++){
+			cout << " Masukkan index matriks pertama = " << x << "," << y << " = ";
+			cin >> nim1[x][y];
+		}
+	}
+	cout << endl;
+	for (x = 0; x < 2; x++){
+		for (y = 0; y < 2; y++){
+			cout << " Masukkan index matriks kedua = " << x << "," << y << " = ";
+			cin >> nim2[x][y];
+		}
+	}
+	cout << endl;
+	for (x = 0; x < 2; x++){
+		for (y = 0; y < 2; y++){
+			jml [x][y] = nim1[x][y]/nim2[x][y];
+			cout << jml [x][y] <<" ";
+		}
+		cout << endl;
+	}
+}
+
+
+int main()
+{
+    system("color 9 ");
+    string user, pass;
+    int pilihan,ulang;
+    cout<<"\t\t\t|==============================|\n\n";
+    cout<<"\t\t\t|=====( SELAMAT DATANG )=======|\n\n";
+    cout<<"\t\t\t|==============================|\n\nSilahkan masukkan identitas anda!\n\n\t\t\t\t(=== LOGIN ===)\n";
+    cout<<"\nMasukkan USERNAME ANDA : "; cin>>user;
+    cout<<"\nMasukkan PASSWORD ANDA: "; cin>>pass;
+ awal:
+    if(user == "Ulul_albab_almujaddidy" && pass == "F1B019139"){
+       cout<<"\n\nPASSWORD dan USERNAME Anda Cocok\nAnda Berhasil Masuk"<<endl;
+       system("cls");
+   
+       cout<<"                          |-------------------------|\n";
+       cout<<"--------------------------| PROGRAM OPERASI MATRIKS |---------------------------";
+       cout<<"                          |-------------------------|\n";
+       cout<<"\n\nMenu yang tersedia:\n \n1.Penjumlahan matriks(+)				3.Perkalian matiks(X)\n\n\n";
+       cout<<" 2.Pengurangan matriks(-)		        	4.Pembagian matriks(:)\n\n";
+       cout<<"                                |--------------|\n";
+       cout<<"--------------------------------| TERIMA KASIH |--------------------------------";
+       cout<<"                                |--------------|\n\n Pilihan anda = ";
+       cin>>pilihan;
+       switch(pilihan)
+      {
+	    case 1:
+       	penjumlahan();
+		   break;
+       	case 2:
+       		pengurangan();
+       	break;
+		case 3:
+			perkalian();
+			break;
+		case 4:
+			pembagian();
+   		}
+   	
+    
+    	cout<<"\n\nKembali ke menu awal?\n1. YA				2.TIDAK\n Pilihan:\n";
+   	cin>>ulang;
+   		
+   	if (ulang==1)
+	{
+		goto awal;
+	
+	}
+	if(ulang==2) {
+	cout<<"\t\t\t|============= TERIMA KASIH =============|";
+}
+	
+}
+ else{
+       cout<<"Gagal Masuk, Password Atau Username Anda Salah\n\n-----------------TERIMA KASIH-------";
+    }
+   
+
+ return 0; 
+
+}
