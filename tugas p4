@@ -1,0 +1,116 @@
+#include<iostream>
+using namespace std;
+int main(){
+	char jawaban[4]={'a','b','c','d'};
+	int point;
+	char jawab1,jawab2,jawab3,jawab4,jawab5,jawab6,jawab7,jawab8,jawab9,jawab10;
+	point=0;
+	cout<<"\t===============================================================\n";
+	cout<<"\t======| SELAMAT DATANG DI PERTANYAAN DENGAN TEMA CORONA |======\n";
+	cout<<"\t===============================================================\n\n";
+	cout<<"\t\tSilahkan jawab pertanyaan berikut dengan benar!\n\n";
+	cout<<"1.Apa kepanjangan dari kata PSBB?";
+	cout<<"\na.Pembatasan sosial berskala besar \n b.Pulang sama bini baru \n c.Pembatasan suami  \n d.pembatasan cinta kita\n";
+	cout<<"Masukkan jawaban anda:";
+	cin>>jawab1;
+	if (jawab1==jawaban[0]){
+		point=point+10;
+	}
+	else {
+		cout<<"Kurang tepat!";
+	}
+	cout<<"\n2.Bagaimana salah satu cara untuk mengurangi penyebaran virus corona ?\n";
+	cout<<"a.Bermain game \n b.Berpelukan sama pasangan \n c.sering cuci tangan pake sabun \n d.senyum ke orang lain \n";
+	cout<<"Masukkan jawaban anda:";
+	cin>>jawab2;
+	if (jawab2==jawaban[2]){
+		point=point+10;
+	}
+	else {
+		cout<<"Kurang tepat!";
+	}
+	cout<<"\n3.Apakah gejala CONVID-19?\n";
+	cout<<"a.demam cinta \n b.Demam , batuk kering , rasa lelah \n c.pilek \n d.kaki patah\n";
+	cout<<"Masukkan jawaban anda:";
+	cin>>jawab3;
+	if (jawab3==jawaban[1]){
+		point=point+10;
+	}
+	else{
+		cout<<"Kurang tepat!";
+	}
+	cout<<"\n4.Apakah Virus Corona dapat melekat pada benda mati?\n";
+	cout<<"a.tidak tau \n b.biasa aja \n c.Tidak sama sekali \n d.Iya\n";
+	cout<<"Masukkan jawaban anda:";
+	cin>>jawab4;
+	if (jawab4==jawaban[3]){
+		point=point+10;
+	}
+	else {
+		cout<<"Kurang tepat!";
+	}
+	cout<<"\n5.Apakah ada hal yang tidak boleh dilakukan demi mencegah convid-19?\n";
+	cout<<"a.ketawa\n b.tidak menggunakan masker berlapis \n c.main game \n d.senyum\n";
+	cout<<"Masukkan jawaban anda:";
+	cin>>jawab5;
+	if (jawab5==jawaban[1]){
+		point=point+10;
+	}
+	else {
+		cout<<"Kurang tepat!";
+	}
+	cout<<"\n6.Convid-19 bisa masuk melalui anggota tubuh , kecuali?\n";
+	cout<<"a.Telinga \n b.mulut \n c.hidung \n d.mata\n";
+	cout<<"Masukkan jawaban anda:";
+	cin>>jawab6;
+	if (jawab6==jawaban[0]){
+		point=point+10;
+	}
+	else {
+		cout<<"Kurang tepat!";
+	}
+	cout<<"\n7.suhu tubuh yang diindikasikan kena convid-19?\n";
+	cout<<"a.36C \n b.38C \n c.34C \n d.33C\n";
+	cout<<"Masukkan jawaban anda:";
+	cin>>jawab7;
+	if (jawab7==jawaban[1]){
+		point=point+10;
+	}
+	else {
+		cout<<"Kurang tepat!";
+	}
+	cout<<"\n8.Masa inkubasi Convid-19?\n";
+	cout<<"a.32 hari \n b.28 hari \n c.14 hari \n d.7 hari\n";
+	cout<<"Masukkan jawaban anda:";
+	cin>>jawab8;
+	if (jawab8==jawaban[2]){
+		point=point+10;
+	}
+	else {
+		cout<<"Kurang tepat!";
+	}
+	cout<<"\n9. Cuci tangan yang paling baik dilakukan dengan menggunakan sabun pada ?\n";
+	cout<<"a.genangan air \n b.air dalam wadah \n c.air mengalir \n d.air kolam\n";
+	cout<<"Masukkan jawaban anda:";
+	cin>>jawab9;
+	if (jawab9==jawaban[2]){
+		point=point+10;
+	}
+	else {
+		cout<<"Kurang tepat!";
+	}
+	cout<<"\n10.Obat untuk virus disebut?\n";
+	cout<<"a.Antivirus \t b.Antibiotik \t c.Pil \t d.Vaksin\n";
+	cout<<"Masukkan jawaban anda:";
+	cin>>jawab10;
+	if (jawab10==jawaban[3]){
+		point=point+10;
+	}
+	else{
+		cout<<"Kurang tepat!";
+	}
+	cout<<"\nPoint anda adalah :"<<point;
+	cout<<"\n\n\t\t\t============================\n";
+	cout<<"\t\t\t======| TERIMA KASIH |======\n";
+	cout<<"\t\t\t============================\n\n";
+}
